@@ -123,6 +123,9 @@ def extract(bs):
     files["image/jpeg"] = []
     files["image/png"] = []
     files["model/mset"] = []
+    files["animData/mset"] = []
+    files["skinrig/mset"] = []
+    files["keyframes/mset"] = []
 
     while not bs.checkEOF():
         name = bs.readString()
