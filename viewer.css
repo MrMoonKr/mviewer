@@ -1,0 +1,36 @@
+div[title="Made with Marmoset Toolbag"], input[title="Help"] , input[title="Layer Views"] , input[title="Full Screen"] {
+    display: none !important;
+}
+div[style="position: absolute; right: 8px; top: 40px; width: 36px; height: 36px;"] {
+    top: 0 !important;
+}
+
+@media only screen and (min-device-width: 1025px)  {
+#marmosetUI {
+    cursor: pointer;
+    background-image: url(finger.png);
+    background-position-x: 75%;
+    background-position-y: 5%; 
+    background-size: 75px 75px;
+    background-repeat: no-repeat;
+    opacity: .5;
+    transition: background-position-x 1s ease-in-out, opacity .25s ease-in-out;
+    animation-name: finger;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+    transition-delay: 1s;
+}
+
+#marmosetUI:hover {
+    opacity: 0;
+    transition-delay: 0s;
+}
+
+@keyframes finger {
+    0%   {background-position-x: 75%;}
+    50%   {background-position-x: 95%;}
+    100%   {background-position-x: 75%;}
+}
+
+
+}
