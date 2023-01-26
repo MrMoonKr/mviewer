@@ -46,6 +46,17 @@ def loadModel(data, mdlList):
             texList.append(specular)
             material.setSpecularTexture(fspecular)
 
+        if "glossTex" in mat:
+            fgloss = mat["glossTex"]
+            gloss = loadTex(files, fgloss)
+            texList.append(gloss)
+
+        if "extrasTex" in mat:
+            fextras = mat["extrasTex"]
+            extras = loadTex(files, fextras)
+            texList.append(extras)
+            material.setOcclTexture(fextras)
+
         if "alphaTest" in mat:
             material.setAlphaTest(mat["alphaTest"])
 
